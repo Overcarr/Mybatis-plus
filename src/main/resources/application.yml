@@ -1,0 +1,22 @@
+server:
+  port: 10010
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://120.25.221.42:3306/chong?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&useSSL=false
+    hikari:
+      username: root
+      password: Logan_2019
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+  mapper-locations: classpath:/mapper/*.xml
